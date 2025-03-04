@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "morzeovka", "morzeovka\morzeovka.csproj", "{56D0B205-D48D-4399-8A3D-E198A7A5309A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{56D0B205-D48D-4399-8A3D-E198A7A5309A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56D0B205-D48D-4399-8A3D-E198A7A5309A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56D0B205-D48D-4399-8A3D-E198A7A5309A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56D0B205-D48D-4399-8A3D-E198A7A5309A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8EB044A2-5098-4C72-9DF1-8BD982619384}
+	EndGlobalSection
+EndGlobal

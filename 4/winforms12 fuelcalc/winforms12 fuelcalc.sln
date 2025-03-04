@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35327.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "winforms12 fuelcalc", "winforms12 fuelcalc\winforms12 fuelcalc.csproj", "{E85BB958-1969-4AB6-948E-566DCDBDBF70}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E85BB958-1969-4AB6-948E-566DCDBDBF70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E85BB958-1969-4AB6-948E-566DCDBDBF70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E85BB958-1969-4AB6-948E-566DCDBDBF70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E85BB958-1969-4AB6-948E-566DCDBDBF70}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F11BA339-CE43-415E-8DC3-75493B06C942}
+	EndGlobalSection
+EndGlobal

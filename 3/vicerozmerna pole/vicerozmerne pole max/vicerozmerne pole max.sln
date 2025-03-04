@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31912.275
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "vicerozmerne pole max", "vicerozmerne pole max\vicerozmerne pole max.csproj", "{BB6E5F7D-4A4D-4F64-A424-AD7A4CD15189}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BB6E5F7D-4A4D-4F64-A424-AD7A4CD15189}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB6E5F7D-4A4D-4F64-A424-AD7A4CD15189}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB6E5F7D-4A4D-4F64-A424-AD7A4CD15189}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB6E5F7D-4A4D-4F64-A424-AD7A4CD15189}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {18A40754-2313-4428-8C33-4B0D8040DFC9}
+	EndGlobalSection
+EndGlobal

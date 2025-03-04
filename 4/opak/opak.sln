@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31912.275
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "opak", "opak\opak.csproj", "{01CD951D-8AFF-4744-B572-1402C7784360}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{01CD951D-8AFF-4744-B572-1402C7784360}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01CD951D-8AFF-4744-B572-1402C7784360}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01CD951D-8AFF-4744-B572-1402C7784360}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01CD951D-8AFF-4744-B572-1402C7784360}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4B4A2DF8-205A-4056-8C50-0EF159BFBE20}
+	EndGlobalSection
+EndGlobal
