@@ -31,14 +31,15 @@
             labelGuessedWord = new Label();
             label1 = new Label();
             label2 = new Label();
+            buttonReturn = new Button();
             SuspendLayout();
             // 
             // labelGuessedWord
             // 
             labelGuessedWord.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 238);
-            labelGuessedWord.Location = new Point(171, 138);
+            labelGuessedWord.Location = new Point(199, 142);
             labelGuessedWord.Name = "labelGuessedWord";
-            labelGuessedWord.Size = new Size(220, 30);
+            labelGuessedWord.Size = new Size(172, 30);
             labelGuessedWord.TabIndex = 0;
             labelGuessedWord.Text = "X";
             labelGuessedWord.TextAlign = ContentAlignment.MiddleCenter;
@@ -58,17 +59,28 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 238);
-            label2.Location = new Point(227, 108);
+            label2.Location = new Point(231, 110);
             label2.Name = "label2";
             label2.Size = new Size(109, 21);
             label2.TabIndex = 2;
             label2.Text = "The word was:";
+            // 
+            // buttonReturn
+            // 
+            buttonReturn.Location = new Point(199, 189);
+            buttonReturn.Name = "buttonReturn";
+            buttonReturn.Size = new Size(172, 34);
+            buttonReturn.TabIndex = 3;
+            buttonReturn.Text = "Go back";
+            buttonReturn.UseVisualStyleBackColor = true;
+            buttonReturn.Click += buttonReturn_Click;
             // 
             // FormLost
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(559, 292);
+            Controls.Add(buttonReturn);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(labelGuessedWord);
@@ -83,5 +95,6 @@
         private Label labelGuessedWord;
         private Label label1;
         private Label label2;
+        private Button buttonReturn;
     }
 }

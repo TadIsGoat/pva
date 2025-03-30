@@ -58,7 +58,7 @@ namespace winforms8_form
                     }
                     else
                     {
-                        MessageBox.Show("File with same ID already exists", "Order complete", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("File with same ID already exists", "Order failed", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
 
                     MessageBox.Show("Successfully ordered", "Order complete", MessageBoxButtons.OK, MessageBoxIcon.Information);

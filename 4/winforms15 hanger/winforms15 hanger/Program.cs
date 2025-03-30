@@ -1,3 +1,5 @@
+using System.Security.Cryptography.X509Certificates;
+
 namespace winforms15_hanger
 {
     internal static class Program
@@ -7,10 +9,7 @@ namespace winforms15_hanger
         {
             ApplicationConfiguration.Initialize();
 
-            FormLost formLost = new FormLost();
-            FormWon formWon = new FormWon();
-            FormLeaderboard formLeaderboard = new FormLeaderboard();
-            FormGame formGame = new FormGame(formLost, formWon, formLeaderboard);
+            FormGame formGame = new FormGame();
 
             Application.Run(formGame);
         }

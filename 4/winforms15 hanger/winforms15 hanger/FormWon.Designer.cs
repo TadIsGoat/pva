@@ -69,6 +69,7 @@
             buttonEnter.TabIndex = 3;
             buttonEnter.Text = "Enter";
             buttonEnter.UseVisualStyleBackColor = true;
+            buttonEnter.Click += buttonEnter_Click;
             // 
             // FormWon
             // 

@@ -30,6 +30,7 @@
         {
             listBoxLeaderboard = new ListBox();
             label1 = new Label();
+            buttonReturn = new Button();
             SuspendLayout();
             // 
             // listBoxLeaderboard
@@ -38,7 +39,7 @@
             listBoxLeaderboard.ItemHeight = 15;
             listBoxLeaderboard.Location = new Point(72, 70);
             listBoxLeaderboard.Name = "listBoxLeaderboard";
-            listBoxLeaderboard.Size = new Size(663, 274);
+            listBoxLeaderboard.Size = new Size(663, 244);
             listBoxLeaderboard.TabIndex = 0;
             // 
             // label1
@@ -51,11 +52,22 @@
             label1.TabIndex = 1;
             label1.Text = "Best players:";
             // 
+            // buttonReturn
+            // 
+            buttonReturn.Location = new Point(312, 320);
+            buttonReturn.Name = "buttonReturn";
+            buttonReturn.Size = new Size(172, 34);
+            buttonReturn.TabIndex = 4;
+            buttonReturn.Text = "Go back";
+            buttonReturn.UseVisualStyleBackColor = true;
+            buttonReturn.Click += buttonReturn_Click;
+            // 
             // FormLeaderboard
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(795, 393);
+            Controls.Add(buttonReturn);
             Controls.Add(label1);
             Controls.Add(listBoxLeaderboard);
             Name = "FormLeaderboard";
@@ -68,5 +80,6 @@
 
         private ListBox listBoxLeaderboard;
         private Label label1;
+        private Button buttonReturn;
     }
 }

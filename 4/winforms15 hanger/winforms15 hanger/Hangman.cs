@@ -5,15 +5,11 @@ namespace winforms15_hanger
 {
     public partial class FormGame : Form
     {
-        private List<string> words = new List<string>() { "mazda", "subaru", "nissan", "bmw", "mercedes", "mitsubishi" };
+        private List<string> words = new List<string>() {"mazda", "subaru", "nissan", "bmw", "mercedes", "mitsubishi", "ford", "audi", "citroen", "skoda"};
         private List<string> guessedLetters = new List<string>();
         public string word { get; private set; }
         public int mistakes { get; private set; }
         private string displayedWord;
-
-        private FormLost formLost;
-        private FormWon formWon;
-        private FormLeaderboard formLeaderboard;
 
         Dictionary<int, Image> images = new Dictionary<int, Image>()
         {
@@ -30,14 +26,13 @@ namespace winforms15_hanger
             { 10, Properties.Resources._11 }
         };
 
-        public FormGame(FormLost _formLost, FormWon _formWon, FormLeaderboard _formLeaderboard)
+        public FormGame()
         {
             InitializeComponent();
             NewGame();
 
-            formLost = _formLost;
-            formWon = _formWon;
-            formLeaderboard = _formLeaderboard;
+            this.KeyPreview = true;
+            this.KeyDown += FormGame_KeyDown;
         }
 
         private void buttonGuess_Click(object sender, EventArgs e)
@@ -53,11 +48,14 @@ namespace winforms15_hanger
         }
         private void buttonLeaderboard_Click(object sender, EventArgs e)
         {
+            this.Hide();
+            FormLeaderboard formLeaderboard = new FormLeaderboard(this);
             formLeaderboard.ShowDialog();
         }
 
         private void NewGame()
         {
+            textBoxGuess.Clear();
             Random rnd = new Random();
             word = words[rnd.Next(words.Count)];
 
@@ -90,6 +88,8 @@ namespace winforms15_hanger
 
             if (!displayedWord.Contains('_'))
             {
+                this.Hide();
+                FormWon formWon = new FormWon(word, mistakes, this);
                 formWon.ShowDialog();
                 return;
             }
@@ -100,12 +100,25 @@ namespace winforms15_hanger
 
             if (mistakes > images.Count - 2)
             {
-                formLost.UpdateWord(word);
+                this.Hide();
+                FormLost formLost = new FormLost(word, this);
                 formLost.ShowDialog();
                 return;
             }
 
             labelWord.Text = displayedWord.Trim();
+        }
+
+        private void FormGame_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                buttonGuess_Click(sender, e);
+            }
+            else if (e.KeyCode == Keys.Escape) 
+            {
+                Application.Exit();
+            }
         }
     }
 }

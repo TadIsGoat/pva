@@ -12,14 +12,18 @@ namespace winforms15_hanger
 {
     public partial class FormLost : Form
     {
-        public FormLost()
+        FormGame formGame;
+        public FormLost(string word, FormGame _formGame)
         {
             InitializeComponent();
+            labelGuessedWord.Text = word;
+            formGame = _formGame;
         }
 
-        public void UpdateWord(string word)
+        private void buttonReturn_Click(object sender, EventArgs e)
         {
-            labelGuessedWord.Text = word;
+            this.Hide();
+            formGame.Show();
         }
     }
 }

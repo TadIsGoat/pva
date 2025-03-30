@@ -1,4 +1,7 @@
-﻿// '$', '♥', '#', '♣', '♦', '♠', '▲', '☻'
+﻿using System.Text;
+Console.OutputEncoding = Encoding.UTF8;
+// '$', '♥', '#', '♣', '♦', '♠', '▲', '☻'
+
 char[,] pexeso = new char[,]
 {
     {'$', '♥', '#', '♣'},
@@ -8,65 +11,72 @@ char[,] pexeso = new char[,]
 };
 
 bool[,] hidden = new bool[4, 4];
-int n1 = 0;
-int n2 = 0;
-
-int n3 = 0;
-int n4 = 0;
+int[] pair1 = { 0, 0 };
+int[] pair2 = { 0, 0 };
+int counter = 0;
 
 Console.WriteLine("======================================================");
 Console.WriteLine("===================== PEXESO =========================");
 Console.WriteLine("======================================================");
 Console.WriteLine();
 
-Render();
-
 while (true)
 {
+    counter++;
+    Render();
 
-    if (!Question(n1, n2))
-    {
-        Question(n1, n2);
-    }
+    pair1 = Question();
 
     Render();
 
-    if (!Question(n3, n4))
-    {
-        Question(n3, n4);
-    }
+    pair2 = Question();
 
-    if (pexeso[n1, n2] == pexeso[n3, n4] && hidden[n1, n2] && hidden[n3, n4])
+    Render();
+
+    if (pexeso[pair1[0], pair1[1]] == pexeso[pair2[0], pair2[1]])
     {
-        Console.WriteLine("Correct!");
+        Console.WriteLine("\nCorrect!\n");
     }
     else
     {
-        hidden[n1, n2] = false;
-        hidden[n3, n4] = false;
-        Console.WriteLine("Try again!");
+        hidden[pair1[0], pair1[1]] = false;
+        hidden[pair2[0], pair2[1]] = false;
+        Console.WriteLine("\nTry again!");
     }
 
-    Render();
+    Console.ReadKey();
+    Console.Clear();
 }
 
-bool Question(int n1, int n2)
+int[] Question()
 {
-    Console.Write("Enter n1: ");
-    n1 = int.Parse(Console.ReadLine());
-    Console.Write("Enter n2: ");
-    n2 = int.Parse(Console.ReadLine());
+    int col;
+    int row;
 
-    if (n1 >= 0 && n1 <= pexeso.GetLength(0) && n2 >= 0 && n2 <= pexeso.GetLength(1))
+    while (true)
     {
-        hidden[n1, n2] = true;
-        return true;
+        Console.Write("Enter row: ");
+        col = int.Parse(Console.ReadLine());
+        Console.Write("Enter column: ");
+        row = int.Parse(Console.ReadLine());
+
+        if (col >= 0 && col <= pexeso.GetLength(0) && row >= 0 && row <= pexeso.GetLength(1))
+        {
+            hidden[col, row] = true;
+            break;
+        }
+        else
+        {
+            Console.WriteLine("You are out of the array!");
+        }
     }
-    else { return false; }
+
+    return [col, row];
 }
 
 void Render()
 {
+    Console.WriteLine("\nRound number: " + counter);
     Console.Write("  ");
     for (int i = 0; i < pexeso.GetLength(0); i++)
     {
